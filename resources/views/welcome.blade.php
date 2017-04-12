@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,6 +87,12 @@
                     <div><a href="./{{{$i}}}">link_{{{$i}}}</a></div>
                 @endfor
                 </div> 
+                <div class="ranking">
+                @foreach($results as $id => $point)
+                    <div><a href="./{{{$id}}}">link_{{{$id}}}_view_count_is_{{{$point}}}</a></div>
+                @endforeach
+                <?php var_dump($results);?>
+                </div>
             </div>
         </div>
     </body>
