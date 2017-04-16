@@ -15,6 +15,7 @@ class RankingModule extends Controller
         $value = Redis::get($key);
         if(empty($value)){
             Redis::set($key, "1");
+            Redis::expire($key, 60*60);  
         } else {
             Redis::set($key,$value + 1);
         }
