@@ -83,11 +83,13 @@
                     Laravel
                 </div>
                 <div class="test_links">
+                <!-- create links for article page-->
                 @for ($i = 0; $i < 10; $i++)
                     <div><a href="./{{{$i}}}">link_{{{$i}}}</a></div>
                 @endfor
                 </div> 
                 <div class="ranking">
+                <!-- create links as Ranking -->
                 @foreach($results as $id => $point)
                     <div><a href="./{{{$id}}}">link_{{{$id}}}_view_count_is_{{{$point}}}</a></div>
                 @endforeach
